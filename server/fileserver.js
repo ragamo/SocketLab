@@ -10,7 +10,7 @@ var http = require('http'),
 	fs = require('fs');
 	
 var server = http.createServer(function (req, res) {
-	fs.readFile('../'+req.url, "binary", function(err, data){
+	fs.readFile('../client/'+req.url, "binary", function(err, data){
 		res.writeHead(200);
 		if (err) {
 			res.end('File not found');
