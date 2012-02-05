@@ -1,0 +1,10 @@
+@import url('reset.css');
+
+.player {
+	background:#CCC;
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:10px;
+	left:10px;
+}

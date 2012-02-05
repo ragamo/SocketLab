@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="css/template.css" media="all" />
+	
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/funciones.js"></script>
+	
+</head>
+<body>
+	
+	<div class="player"></div>
+	
+	<script type="text/javascript">
+		var socket = io.connect('http://192.168.1.36:2000');
+		socket.on('playerslist', function (data) {
+			console.log('list: '+data);
+		});
+		socket.on('id', function (data) {
+		    console.log('ID: '+data);
+		    //socket.emit('my other event', { my: 'data' });
+		  });
+	</script>
+	
+</body>
+</html>
